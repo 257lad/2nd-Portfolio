@@ -132,6 +132,8 @@ nav .social{
 .social label{
     width: 50px;
     height: 50px;
+    display:grid;
+    place-content: center;
     border-radius: 50%;
     font-size: 35px;
     background-color: var(--dark);
