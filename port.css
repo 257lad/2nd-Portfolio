@@ -1,0 +1,1093 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0 ;
+    overflow: hidden;
+}
+
+input:not(.used){
+    display: none;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: rgba(61, 61, 61, 0.823);
+    /* padding-top:80px; */
+    background-color: rgb(226, 226, 226);
+    transition: .2s ease-in-out;
+}
+.container nav{
+    position: relative;
+    top: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    width: 100%;
+    min-width: 880px;
+    height: 70px;
+    padding: 10px 110px;
+    /* background-color: red; */
+}
+nav .options{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding: 0;
+    /* margin: 0; */
+}
+nav .options label{
+    cursor: pointer;
+}
+.options::after{
+    position: absolute;
+    top: 21px;
+    /* left: 10px; */
+    content: '';
+    height: 2px;
+    width: 45px;
+    background-color: rgba(61, 61, 61, 0.823);
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+/* PAGE INDICATOR */
+#page1:checked ~ nav .options::after{
+    left: 0px;
+    width: 42px;
+}
+#page2:checked ~ nav .options::after{
+    left: 52px;
+}
+#page4:checked ~ nav .options::after{
+    left: 106px;
+    width: 93px;
+}
+
+/* ZHOUNGWEN MINGZI */
+nav .slogan{
+    position: sticky;
+    left: calc(50% - 25px);
+    display: grid;
+    place-content: center;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: black;
+    color: rgb(221, 221, 222);
+    border-radius: 50%;
+}
+
+/* SOCIAL MEDIA AND CONTACT LINKS */
+nav .social{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 20px;
+}
+.social #social{
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    /* width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0.34); */
+    font-size: 30px;
+    transition: .2s ease-in-out;
+    border-radius: 50%;
+}
+.social #social a{
+    color: rgba(61, 61, 61, 0.823);
+}
+    /* hovering effects */
+.social #social i:hover{
+    transition: .1s ease-in-out;
+}
+.social #social:nth-child(1) .fa-brands:hover{
+    color: rgb(28, 28, 188);
+}
+.social #social:nth-child(2) .fa-brands:hover{
+    color: aqua;
+}
+
+.social #social:nth-child(3) i:hover {
+    color: rgb(83, 134, 206);
+}
+:root{
+    --clr:rgb(226, 226, 226);
+    --dark:rgba(61, 61, 61, 0.823);
+}
+.social label{
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 35px;
+    background-color: var(--dark);
+    color: var(--clr);
+}
+#social .fa-moon{
+    transform: rotate(-20deg);
+}
+.social label::after{
+    position: absolute;
+    content: 'Theme';
+    font-size: 17px;
+    bottom: -10px;
+    color: var(--clr);
+}
+
+
+/* CONTENT DESIGN */
+.container .content{
+    height: 80%;
+    width: 100%;
+    min-width: 880px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    margin: calc();
+}
+.content .left{
+    position: relative;
+    top: -30px;
+    height: 90%;
+    width: 50%;
+    /* min-width: 450px; */
+    background-image: url(image.png);
+    background-position: center;
+    background-size: 450px;
+    background-repeat: no-repeat;
+    transition: .2s ease-in-out;
+}
+.left img{
+    display: none;
+}
+.left .logo{
+    position: absolute;
+    bottom: 20px;
+    left: 9vw;
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* color: #ffff; */
+    letter-spacing: 5px;
+    font-weight: 25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px black;
+    transform: rotate(-11deg);
+}
+.wordcont span{
+    display: block;
+    position: absolute;
+    /* color: rgb(151, 63, 0); */
+    font-weight: bold;
+    /* text-shadow: 1px 1px 0 black; */
+}
+
+/* CIRCLING TEXT TO MAKE A LOGO */
+.letter1{
+    top: 40px;
+    left: -18px;
+    transform: rotate(-92deg);
+}
+.letter2{
+    top: 32px;
+    left: -17.5px;
+    transform: rotate(-85deg);
+}
+.letter3{
+    top: 23px;
+    left: -18px;
+    transform: rotate(-80deg);
+}
+.letter4{
+    top: 12px;
+    left: -13px;
+    transform: rotate(-65deg);
+}
+.letter5{
+    top: 5px;
+    left: -5px;
+    transform: rotate(-48deg);
+}
+.letter6{
+    top: -1px;
+    left: 0px;
+    transform: rotate(-44deg);
+}
+.letter7{
+    top: -8px;
+    left: 4px;
+    transform: rotate(-36deg);
+}
+.letter8{
+    top: -15px;
+    left: 13px;
+    transform: rotate(-33deg);
+}
+.letter9{
+    top: -19px;
+    left: 23px;
+    transform: rotate(-18deg);
+}
+.letter11{
+    top: -21px;
+    left: 45px;
+    transform: rotate(1deg);
+}
+.letter12{
+    top: -20px;
+    right: 24px;
+    transform: rotate(14deg);
+}
+.letter13{
+    top: -15px;
+    right: 15px;
+    transform: rotate(29deg);
+}
+.letter15{
+    top: -5px;
+    right: 0px;
+    transform: rotate(45deg);
+}
+.letter16{
+    top: 5px;
+    right: -7px;
+    transform: rotate(51deg);
+}
+.letter17{
+    top: 14px;
+    right: -12px;
+    transform: rotate(61deg);
+}
+.letter18{
+    top: 23px;
+    right: -17px;
+    transform: rotate(68deg);
+}
+.letter19{
+    top: 31px;
+    right: -17px;
+    transform: rotate(76deg);
+}
+.letter20{
+    top: 39px;
+    right: -20px;
+    transform: rotate(78deg);
+}
+.letter21{
+    top: 49px;
+    right: -20px;
+    transform: rotate(89deg);
+}
+.letter22{
+    top: 60px;
+    right: -18px;
+    transform: rotate(93deg);
+}
+.letter23{
+    top: 70px;
+    right: -11px;
+    transform: rotate(105deg);
+}  /* AWEEEEE!!! THESE LETTERS NEARLY MADE ME GONNA GIVE UP */
+
+.left .logo p{
+    transform: rotate(11deg);
+    color: rgb(219, 208, 208);
+}
+.left .logo::after{
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    content: '';
+    height: 10px;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: rotate(12deg);
+    border-radius: 50%;
+}
+.content .right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+
+/* HIDING ALL PAGE CONTAINER */
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 100px;
+    /* opacity: 0; */
+    transform: scale(0);
+    transition: .2s ease-in-out; 
+}
+
+/* DISPLAY A SINGLE PAGE CONATINER ON ONE TIME */
+#page1:checked ~ .content .page1{
+    /* opacity: 1; */
+    transform: scale(1);
+}
+#page2:checked ~ .content .page2{
+    transform: scale(1);
+    opacity: 1;
+}
+#page3:checked ~ .content .page3{
+    transform: scale(1);
+    opacity: 1;
+}
+#page4:checked ~ .content .page4{
+    transform: scale(1);
+    opacity: 1;
+}
+#page4:checked ~ .content .right{
+    overflow: visible;
+}
+
+/* PAGE1 CONTAINER DESIGNING */
+.page1{
+    /* text-align: right; */
+    width: 90%;
+}
+.page1 h2{
+    padding-top: 100px;
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    width: 90%;
+    margin: 0;
+    line-height: 43px;
+}
+.page1 p{
+    text-align: left;
+    word-break: break-all;
+    font-size: 14px;
+}
+.page1 h1{
+    position: relative;
+    left: 9vw;
+    color: bisque;
+    color: rgb(215, 155, 4);
+    /* color: rgb(170, 183, 28); */
+    font-size: 40px;
+    font-weight: 1000;
+    text-shadow: 0 0 80px ;
+    /* text-align: center; */
+}
+.page1 h1::after, .page1 h1::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px ;
+}
+.page1 h1::before{
+    background-color: rgb(246, 250, 239);
+    /* background-color: var(--clr); */
+    left: -60px;
+}
+.page1 h1::after{
+    background-color: rgb(229, 169, 255);
+    /* background-color: rgb(180, 255, 42); */
+    /* box-shadow: 0 0 10px rgb(81, 223, 255); */
+    left:60px;
+}
+
+
+/* PAGE2 CONTAINER DESIGNING */
+.summary{
+    position: relative;
+}
+.page2 .prof{
+    position: relative;
+    bottom: -3px;
+    left: 100px;
+    display: inline-block;
+    margin: 0 ;
+    padding: 5px 10px;
+    border: 2px solid;
+    border-color: rgba(0, 255, 255, 0.792);
+    font-size: 16px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0 ;
+    background-color: rgb(226, 226, 226);
+    transition: .2s ease-in-out;
+}
+.page2 .summ{
+    width: 415px;
+    text-align: justify;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: rgba(0, 255, 255, 0.792);
+    border-radius:10px 0;
+}
+.progressor{
+    width: 415px;
+    padding: 20px;
+    padding-top: 0;
+    border: 2px solid rgb(162, 109, 9) /*rgb(139, 0, 139) */;
+    border-radius: 10px;
+}
+.progressor::before{
+    content: 'Web Development';
+    position: relative;
+    top: -12px;
+    left: -7px;
+    padding: 0 7px;
+    background-color: rgb(226, 226, 226);
+    font-weight: bold;
+    font-size: 20px;
+    /* text-transform: uppercase; */
+    transition: .2s ease-in-out;
+}
+.progress{
+    display: flex;
+}
+.progress h4{
+    font-style: italic;
+    position: relative;
+    color: var(--clr);
+    margin:3px 0;
+}
+.progress h4{
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    color: var(--clr);
+    opacity: .7;
+    transition: .2s ease-in-out;
+}
+.progress h3{
+    order: 2;
+    left: 50%;
+    display: none;
+}
+.progress h4::before{
+    position: absolute;
+    top: 6px;
+    left: 70px;
+    content: '';
+    height: 5px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(193, 190, 190);
+    transition: .2s ease-in-out;
+}
+.progress h4::after{
+    position: absolute;
+    top: 6px;
+    left: 70px;
+    content: '';
+    height: 4.5px;
+    width: calc(3px * var(--i));
+    opacity: 0.7;
+    border-radius: 10px;
+    background-color: var(--clr);
+}
+.additional{
+    position: relative;
+}
+ul{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid;
+    padding-top: 10px ;
+    width: 140px;
+    font-style: italic;
+    font-weight: 540;
+    /* display: none; */
+}
+li{
+    margin: 5px 0;
+}
+ul li:nth-child(1){
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    list-style: none;
+    font-style: normal;
+    padding: 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(226, 226, 226);
+    transition: .2s ease-in-out;
+}
+
+.languages{
+    position: absolute;
+    left: 265px;
+    top:-16px;
+    width: 150px;
+    padding-top: 20px;
+    border-color: rgb(39, 209, 110);
+}
+.skills{
+    width: 260px;
+    border-color: rgba(0, 255, 255, 0.792);
+}
+.additional h4{
+    position: relative;
+    left: 23px;
+    bottom: 20px;
+}
+.page2 #portfolio{
+    display:inline-block;
+    place-content: center;
+    height: 39px;
+    width: 144px;
+    padding: 10px 40px;
+    margin:0 10px;
+    border-radius: 5px;
+    color: rgb(205, 205, 205);
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid ;
+    background-color: rgb(56, 55, 55);
+    outline: 3px solid rgb(56, 55, 55);
+    transition:  .2s ease-in-out;
+}  /* THE SECOND PAGE REALLY TOOK MANY LINE TO DESIGN IT */
+
+/* NOW LET'S DESIGN THE 4TH PAGE */
+.form{
+    position: relative;
+    top: 80px;
+    left: 8vw;
+    width: 300px;
+}
+.form::after{
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    content: '';
+    width: 430px;
+    height: 430px;
+    border-radius: 58% 55% ;
+    border: 2px solid lightgreen;
+    animation: circle2 10s ease-in-out infinite forwards;
+    box-shadow: 0 0 100px rgb(0, 55, 255) ;
+    z-index: -1;
+}
+@keyframes circle2 {
+    10%{
+        border-radius: 58% 63%;
+    }
+    20%{
+        border-radius: 47% 52%;
+    }
+    40%{
+        border-radius: 55% 50%;
+    }
+    60%{
+        border-radius: 50% 65%;
+    }
+    80%{
+        border-radius: 53% 49%;
+    }
+    100%{
+        border-radius: 55% 54%;
+        transform: rotate(360deg);
+
+    }
+}
+.form::before{
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    content: '';
+    width: 430px;
+    height: 430px;
+    border-radius: 50% 53% ;
+    border: 2px solid rgb(33, 240, 240);
+    animation: circle 10s ease-in-out infinite forwards;
+    box-shadow: 0 0 100px rgb(248, 73, 248) ;
+    z-index: -1;
+}
+@keyframes circle {
+    10%{
+        border-radius: 56% 53%;
+    }
+    20%{
+        border-radius: 50% 49%;
+    }
+    40%{
+        border-radius: 55% 45%;
+    }
+    60%{
+        border-radius: 52% 54%;
+    }
+    80%{
+        border-radius: 53% 56%;
+    }
+    100%{
+        border-radius: 53% 56%;
+        transform: rotate(360deg);
+
+    }
+}
+.formright{
+    position: relative;
+    text-align: center;
+}
+.formright h3{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formright p{
+    font-size: 19px;
+    margin:10px  auto;
+}
+.formleft{
+    margin-top: 30px;
+}
+.info{
+    position: relative;
+    top: 10px;
+    height: 30px;
+    margin-top: 15px;
+}
+input.used:not([type="button"]){
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    width: 300px;
+    outline: none;
+    font-size: 17px;
+}
+.info span{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    transition: .2s ease-in-out;
+    
+}
+.used:not([type="button"]):focus + span,
+.used:not([type="button"]):valid + span{
+    top: -14px;
+    color:rgb(122, 95, 118) ;
+    font-size: 13px;
+}
+input[type="button"]{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #adaaaa;
+    font-size: 16px;
+    background-color: rgb(153, 53, 199);
+    /* background-color: rgb(146, 30, 200); */
+    border: none;
+}
+input[value="Skip"]{
+    top: 50px;
+    /* color: rgba(255, 255, 255, 0.541);*/
+    background-color: rgb(238, 236, 236);
+    transition:  .2s ease-in-out;
+}
+
+/* DARK MODE DESIGNING */
+#dark:checked ~ .container {
+    background-color: rgb(43, 43, 43);
+    color: rgb(159, 157, 157);
+}
+#dark:checked ~ .container .l{
+    background-color: #adaaaa;
+}
+#dark:checked ~ .container .used:not([type="button"]),
+#dark:checked ~ .container .options a{
+    color: #adaaaa;
+}
+#dark:checked ~ .container .dark::before{
+    left: 47%;
+    outline: 0.5px solid rgba(0, 255, 0, 0.366);
+    background-color: rgb(56, 56, 56);
+}
+#dark:checked ~ .container .dark{
+    background-color: rgb(194, 192, 192);
+}
+#dark:checked ~ .container #portfolio{
+    height: 39px;
+    width: 144px;
+    background-color: #adaaaa;
+    color:  rgb(13, 1, 1);
+    border: 1px solid;
+    outline: 3px solid rgb(159, 157, 157);
+}
+#dark:checked ~ .container .left{
+    opacity: 0.8;
+}
+#dark:checked ~ .container .logo{
+    background-color: #adaaaa;
+    box-shadow: 0px 0px 10px #adaaaa;
+}
+#dark:checked ~ .container .left .logo p{
+    color: rgb(255, 255, 255);
+}
+#dark:checked ~ .container .left .logo span{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 20px black;
+}
+#dark:checked ~ .container .options::after{
+    background-color: rgb(159, 157, 157);
+}
+#dark:checked ~ .container .left .logo::after{
+    background-color: #adaaaa;
+}
+#dark:checked ~ .container .progressor::before,
+#dark:checked ~ .container .prof,
+#dark:checked ~ .container ul li:nth-child(1){
+    background-color: rgb(43, 43, 43);
+}
+#dark:checked ~ .container input[value="Skip"]{
+    background-color: rgb(63, 61, 61);
+    color: #adaaaa5a;
+}
+#dark:checked ~ .container .progress h4{
+    opacity: 1;
+    color: #adaaaa;
+}
+#dark:checked ~ .container .progress h4::before{
+    background-color: rgba(0, 0, 0, 0.371);
+}
+#dark:checked ~ .container .social label{
+    background-color: rgb(226, 226, 226);
+    color: rgba(61, 61, 61, 0.823);
+}
+#dark:checked ~ .container .social #social a{
+ color: #adaaaa;
+}
+.social label::after{
+    color: #adaaaa;
+}
+
+
+
+/* ADDING A LITTLE QUERIES */
+@media screen and (max-width:480px) {
+    body{
+        max-width: 480px;
+        position: relative;
+    }
+    .container{
+        max-width: 100vw;
+        color: #ececec;
+        color: #a7daed;
+    }
+
+    /* HAMBURGER MENU DESIGNING */         
+    .container nav{
+        position: fixed;
+        inset: 0;
+        top: -100%;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 50vw;
+        height: 50%;
+        padding: 30px;
+        padding-left: calc(50% - 125px);
+        gap: 10px;
+        background-color:rgba(113, 71, 184, 0.68);
+        z-index: 100;
+        transition: .2s ease-in-out;
+    }
+    .options::after{
+        display: none;
+    }
+    .options{
+        flex-direction: column;
+    }
+    .options label{
+        display: grid;
+        place-content: center;
+        background-color: rgb(210, 20, 172);
+        width:250px;
+        height: 35px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .social{
+        position: relative;
+        width: fit-content;
+        left: 30px;
+    }
+    .social #social{
+        height: 30px;
+        width: 30px;
+        margin: 0;
+        border-radius: 0;
+    }
+    #social i{
+        color: #a7daed;
+    }
+    .social label{
+        position: absolute;
+        left: -30px;
+        bottom: -40px;
+        width: 250px;
+        height: 35px;
+        background-color: rgb(210, 20, 172);
+        border-radius: 5px;
+    }
+    .social label::after{
+        display: none;
+    }
+    nav .slogan{
+        display: none;
+    }
+    a[href="#nav"]{
+        position:absolute;
+        top: 20px;
+        left: calc(100% - 15vw);
+        display: block;
+        background-color: rgba(255, 178, 178, 0);
+        /* border: 2px solid ; */
+        z-index: 100;
+    }
+    a .btn{
+        position: relative;
+        height: 5px;
+        width: 35px;
+        margin: 5px;
+        background-color: #2e2929;
+        border-radius: 10px;
+    }
+    #nav:target{
+        top: 0px;
+        width: 100vw;
+    }
+    a[href="#"]{
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color:rgba(23, 20, 20, 0.329);
+        /* background-color: aquamarine; */
+        z-index: 1000;
+    }
+
+    /* NOW DESIGNING THE CONTENT */
+    .container .content{
+        position: relative;
+        width: 100vw;
+        overflow: scroll;
+    }
+    .content .left{
+        position: relative;
+        max-width: 100%;
+        /* max-width: 90vw; */
+        height: 65%;
+        padding: 0;
+        margin: 0;
+        background: none;
+    }
+    .left img{
+        display: block;
+        width: 100vw;
+        min-width: 320px;
+    }
+    .container .logo{
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        float: right;
+        margin-right: 15vw;
+        transform:rotate(-11deg) scale(0.8);
+    }
+    
+    .wordcont span{
+        /* color: rgb(25, 164, 186); */
+        color: #2e2929;
+        text-shadow: 1px 1px 1px white;
+    }
+    .logo::after{
+        display: none;
+    }
+    .right{
+        position: absolute;
+        inset: 0;
+        top: -50px;
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        margin: 20px;
+        color: #2e2929;
+        float: left;
+    }
+    .page{
+        position: relative;
+        top: -50px;
+        transform: scale(1);
+        min-width: 320px;
+    }
+    .page1{
+        padding: 0;
+        /* top: 110px; */
+    }
+    .page1 h2{
+        width: 90vw;
+        padding: 0;
+        font:italic small-caps 200  30px Arial,sans serif;
+    }
+    .page1 p{
+        width: 90vw;
+        margin: 0;
+    }
+    .page1 h1{
+        font: 600 8vw arial ;
+        position: relative;
+        /* left: 50%;
+        transform: translate(-50%); */
+        margin: 0 14vw 50px 14vw;
+    }
+    .page1 h1::before, .page1 h1::after{
+        position: absolute;
+        width: 45vw;
+    }
+    .page1 h1::before{
+        left: -10vw;
+    }
+    .page1 h1::after{
+        left: 10vw;
+    }
+    .page2{
+        width: 100vw;
+        padding: 0;
+        /* font-size: 4vw; */
+    }
+    .page2 .summary{
+        width: 90vw;
+    }
+    .summary .prof{
+        left: 18%;
+        font-size: 17px;
+    }
+    .summary .summ{
+        width:90vw;
+    }
+    .page2 .progressor{
+        width: 90vw;
+        padding: 0 10px 10px ;
+    }
+    /* .progress{
+        width: 100px;
+    } */
+    .progressor::before{
+        font-size: 4vw;
+    }
+    .progress h4::before{
+        width: 62vw;
+    }
+    .progress h4::after{
+        width: calc(0.62vw * var(--i));
+    }
+    
+    .additional{
+        display: flex;
+        gap: 10px;
+        /* flex-direction: column; */
+        width: 90%;
+        font-size: 15px;
+    }
+    .additional .languages{
+        position: relative;
+        inset: 0;
+        top: 10px;
+        height: fit-content;
+        margin: 10px auto;
+        order: 1;
+    }
+    .languages .lan0{
+        font-size: 15px;
+    }
+    .skills{
+        margin:20px auto;
+        /* font-size: 4vw; */
+    }
+    .skills li:nth-child(1){
+        font-size: 15px;
+    }
+    .additional h4{
+        position: absolute;
+        display: none;
+        order: 3;
+        width: 80vw;
+        text-align: center;
+    }
+    .page2 #portfolio{
+        margin: 10px 0;
+    }
+
+
+    .page4{
+        position: absolute;
+        display: none;
+        margin: 0;
+        padding: 0;
+        left: 7vw;
+    }
+    #dark:checked ~ .container .left{
+        opacity: 0.7;
+    }
+    /* body,.content, .left, img, .progressor,
+    .summary,.page2{
+        min-width: 320px;
+    } */
+
+    /*  DARK MODE DESIGNING */
+    #dark:checked ~ .container #social i{
+        color: #adaaaa;
+    }
+    #dark:checked ~ .container nav label,
+    #dark:checked ~ .container .social label{
+        background-color: #2e2929;
+    }
+    #dark:checked ~ .container .btn{
+        background-color: #ececec;
+    }
+    #dark:checked ~ .container .social label{
+        color: #adaaaa;
+    }
+    #dark:checked ~ .container .right{
+        color: #ececec;
+    }
+    @media screen and (max-width:320px){
+        .progressor::before{
+            font-size: 14px;
+        }
+        .page1 h1{
+            font-size: 27px;
+        }
+    }     
+}
