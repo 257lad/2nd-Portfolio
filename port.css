@@ -51,6 +51,9 @@ nav .options{
 nav .options label{
     cursor: pointer;
 }
+nav a[type="#"]{
+    display:none;
+}
 .options::after{
     position: absolute;
     top: 21px;
@@ -864,7 +867,7 @@ input[value="Skip"]{
     nav .slogan{
         display: none;
     }
-    a[href="#nav"]{
+    nav a[href="#nav"]{
         position:absolute;
         top: 20px;
         left: calc(100% - 15vw);
