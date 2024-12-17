@@ -666,6 +666,9 @@ ul li:nth-child(1){
 .formright p{
     font-size: 19px;
     margin:10px  auto;
+    span{
+        color: rgb(218, 24, 24);
+    }
 }
 .formleft{
     margin-top: 30px;
@@ -689,12 +692,11 @@ input.used:not([type="button"]){
     top: 0px;
     left: 0;
     transition: .2s ease-in-out;
-    
 }
 .used:not([type="button"]):focus + span,
 .used:not([type="button"]):valid + span{
     top: -14px;
-    color:rgb(122, 95, 118) ;
+    color:rgb(137, 102, 145) ;
     font-size: 13px;
 }
 input[type="button"]{
@@ -704,7 +706,7 @@ input[type="button"]{
     height: 35px;
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #adaaaa;
+    color: #e4e3e3;
     font-size: 16px;
     background-color: rgb(153, 53, 199);
     /* background-color: rgb(146, 30, 200); */
@@ -712,7 +714,7 @@ input[type="button"]{
 }
 input[value="Skip"]{
     top: 50px;
-    /* color: rgba(255, 255, 255, 0.541);*/
+    color: rgba(255, 255, 255, .7);
     background-color: rgb(238, 236, 236);
     transition:  .2s ease-in-out;
 }
@@ -772,7 +774,7 @@ input[value="Skip"]{
 }
 #dark:checked ~ .container input[value="Skip"]{
     background-color: rgb(63, 61, 61);
-    color: #adaaaa5a;
+    color: #b9b7b7;
 }
 #dark:checked ~ .container .progress h4{
     opacity: 1;
